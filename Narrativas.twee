@@ -1,0 +1,163 @@
+:: StoryTitle
+Narrativas
+
+
+:: StoryData
+{
+  "ifid": "BC0D946D-EAC9-4805-AFD4-B7016338D30B",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: \ End 3 {"position":"1250,850","size":"100,100"}
+You and Florbela became a new poet!
+
+
+:: \ End 4 {"position":"1375,850","size":"100,100"}
+Florbela is Forgotten and the other archives are safe!
+
+
+:: \ End 5 {"position":"1500,850","size":"100,100"}
+Florbela thanks you for not letting her be forgotten and vanishes!
+
+
+:: $destino {"position":"1125,850","size":"100,100"}
+
+
+
+:: Abandoned Room's Archive {"position":"1600,25","size":"100,100"}
+
+
+
+:: Decision A {"position":"950,150","size":"100,100"}
+Player is transported to a distorted version of the library in the 1920's
+They are in the main entrance and suddenly someone starts talking to them
+
+[[Who are you? ->Scenario 1.1]]
+[[Where am I? ->Scenario 1.2]]
+
+
+:: End 1 {"position":"950,300","size":"100,100"}
+End 1
+
+Player leaves the library
+
+[[Start Again ->Start Game]] 
+
+
+:: End 2 {"position":"1100,725","size":"100,100"}
+You don't have enough fragments, Florbela is forgotten!
+
+
+:: Grief letter {"position":"1275,525","size":"100,100"}
++1 fragment
+
+(set: $fragmentos to $fragmentos + 1)
+
+
+(set: $destino to "End 2")
+
+(if: $fragmentos > 0 and $fragmentos <= 2)[
+	(set: $destino to "Scenario 2")
+]
+(else-if: $fragmentos > 2)[
+	(set: $destino to "Scenario 3")
+]
+
+[[Go to main hall->$destino]]
+[[Go to whisper's archive ->Whisper's Archive]] 
+[[Go to abandoned room's archive ->Abandoned Room's Archive]] 
+
+
+:: Incomplete letter {"position":"1400,525","size":"100,100"}
++1 fragment
+
+(set: $fragmentos to $fragmentos + 1)
+
+(set: $destino to "End 2")
+
+(if: $fragmentos > 0 and $fragmentos <= 2)[
+	(set: $destino to "Scenario 2")
+]
+(else-if: $fragmentos > 2)[
+	(set: $destino to "Scenario 3")
+]
+
+[[Go to main hall->$destino]]
+[[Go to whisper's archive ->Whisper's Archive]] 
+[[Go to abandoned room's archive ->Abandoned Room's Archive]] 
+
+
+:: Letter's Archive {"position":"1275,375","size":"100,100"}
+The player enters the room with 3 dancing letters
+
+[[Love letter ->Love letter]]
+[[Grief letter ->Grief letter]]
+[[Incomplete letter ->Incomplete letter]]
+
+
+:: Love letter {"position":"1150,525","size":"100,100"}
++1 fragment
+
+(set: $fragmentos to $fragmentos + 1)
+
+(set: $destino to "End 2")
+
+(if: $fragmentos > 0 and $fragmentos <= 2)[
+	(set: $destino to "Scenario 2")
+]
+(else-if: $fragmentos > 2)[
+	(set: $destino to "Scenario 3")
+]
+
+[[Go to main hall->$destino]]
+[[Go to whisper's archive ->Whisper's Archive]] 
+[[Go to abandoned room's archive ->Abandoned Room's Archive]] 
+
+
+:: Rooms {"position":"1300,25","size":"100,100"}
+The map of the library appears and 3 paths are shown
+
+[[Letter's archive ->Letter's Archive]]
+[[Whispers' archive ->Whisper's Archive]]
+[[Abandoned room's archive ->Abandoned Room's Archive]]
+
+
+:: Scenario 1.1 {"position":"1100,75","size":"100,100"}
+Florbela Introduces herself and explain the situation
+
+[[How can I help you ->Rooms]]
+
+
+:: Scenario 1.2 {"position":"1100,225","size":"100,100"}
+System introduces itself and florbela explains the situation
+
+[[How can I help you ->Rooms]]
+
+
+:: Scenario 2 {"position":"1250,725","size":"100,100"}
+[[Merge with Florbela -> End 3]]
+[[Delete Archive -> End 4]]
+
+
+:: Scenario 3 {"position":"1400,725","size":"100,100"}
+[[Merge with Florbela -> End 3]]
+[[Delete Archive -> End 4]]
+[[Set Florbela free -> End 5]]
+
+
+:: Start {"position":"650,250","size":"100,100"}
+[[Start Game]]
+(set: $fragmentos to 0)
+
+
+:: Start Game {"position":"800,250","size":"100,100"}
+[[Open the file ->Decision A]]
+[[Don't touch the computer ->End 1]]
+
+
+:: Whisper's Archive {"position":"1475,225","size":"100,100"}
+
