@@ -15,245 +15,329 @@ Narrativas
 }
 
 
-:: \ End 3 {"position":"2600,600","size":"100,100"}
-You and Florbela became a new poet!
+:: \ Ending 5 {"position":"2600,1000","size":"100,100"}
+Florbela transforms into just light. The distorted library starts to disappear. One last time, you hear her voice:
 
+(align:"=><=")[//I am now a living memory. You saved me.
+Thank you for not letting me be forgotten.//]
 
-:: \ End 4 {"position":"2600,750","size":"100,100"}
-Florbela is Forgotten and the other archives are safe!
+You return to the real world, forever touched by what you experienced that night.
 
-
-:: \ End 5 {"position":"2600,900","size":"100,100"}
-Florbela thanks you for not letting her be forgotten and vanishes!
-
-
-:: $destino {"position":"2175,700","size":"100,100"}
-
-
-
-:: Abandoned Room's Archive {"position":"1600,1200","size":"100,100"}
-Lights flicker. A damaged diary, a blank page and a broken mirror appear.
-
-[[Rewrite the diary ->Rewrite diary]] 
-[[Write a new verse ->Write verse]]
-[[Look at the mirror ->Look mirror]] 
-
-
-:: End 1 {"position":"950,850","size":"100,100"}
-End 1
-
-Player leaves the library
+(align:"=><=")[''The End'']
 
 [[Start Again ->Start Game]]
 
 
-:: End 2 {"position":"2400,500","size":"100,100"}
-You don't have enough fragments, Florbela is forgotten!
+:: $destino {"position":"2175,800","size":"100,100"}
 
 
-:: Grief letter {"position":"1800,200","size":"100,100"}
-+1 fragment
 
-(set: $fragmentos to $fragmentos + 1)
+:: Abandoned Room's Archive {"position":"1625,1275","size":"100,100"}
+The walls of the library flicker. The ceiling seems to be failing. Florbela whispers:
 
+(align:"=><=")[//I was torn apart. Help me re-write myself…//]
 
-(set: $destino to "End 2")
+In front of you there are 3 objects:
+* A diary in very poor conditions;
+* A blank page;
+* A broken mirror.
 
-(if: $fragmentos > 0 and $fragmentos <= 2)[
-	(set: $destino to "Scenario 2")
-]
-(else-if: $fragmentos > 2)[
-	(set: $destino to "Scenario 3")
-]
+How do you choose to help Florbela?
 
-[[Go to main hall->$destino]]
-[[Go to whisper's archive ->Whisper's Archive]] 
-[[Go to abandoned room's archive ->Abandoned Room's Archive]]
+[[Reconstruct the diary ->Rewrite diary]] 
+[[Write a new text ->Write verse]]
+[[Look into the mirror ->Look mirror]]
 
 
-:: Incomplete letter {"position":"1800,325","size":"100,100"}
-+1 fragment
+:: Continue {"position":"1625,425","size":"100,100"}
+You turn around and see a statue of Luís Vaz de Camões. His lips move slowly and you can hear him talking to you softly. 
 
-(set: $fragmentos to $fragmentos + 1)
+(align:"=><=")+(box:"X")[//Fear not what to choose. Look within your heart and connect with your own feelings. What do you think you need to read about the most?//]
 
-(set: $destino to "End 2")
-
-(if: $fragmentos > 0 and $fragmentos <= 2)[
-	(set: $destino to "Scenario 2")
-]
-(else-if: $fragmentos > 2)[
-	(set: $destino to "Scenario 3")
-]
-
-[[Go to main hall->$destino]]
-[[Go to whisper's archive ->Whisper's Archive]] 
-[[Go to abandoned room's archive ->Abandoned Room's Archive]]
+[[Open the love letter  ->Love letter]]
+[[Open the grief letter ->Grief letter]]
+[[ Open the incomplete letter ->Incomplete letter]] 
 
 
-:: Letter's Archive {"position":"1600,200","size":"100,100"}
-The player enters the room with 3 dancing letters
 
-[[Love letter ->Love letter]]
-[[Grief letter ->Grief letter]]
-[[Incomplete letter ->Incomplete letter]]
+:: Delete Archive {"position":"2600,875","size":"100,100"}
+You press the “Del” key. Everything vanishes. You hear nothing but your own heartbeat.
 
+The library goes back to normal and so does the computer’s screen. No one remembers the name “Florbela Espanca”.
 
-:: Listen whisper {"position":"1800,575","size":"100,100"}
-+1 fragment
+(align:"=><=")[//Nothing hurts, but nothing lives.//]
 
-(set: $fragmentos to $fragmentos + 1)
+(align:"=><=")[''The End.'']
 
-(set: $destino to "End 2")
-
-(if: $fragmentos > 0 and $fragmentos <= 2)[
-	(set: $destino to "Scenario 2")
-]
-(else-if: $fragmentos > 2)[
-	(set: $destino to "Scenario 3")
-]
-
-[[Go to main hall->$destino]]
-[[Go to letter's archive ->Letter's Archive]] 
-[[Go to abandoned room's archive ->Abandoned Room's Archive]]
+[[Start Again ->Start Game]]
 
 
-:: Look mirror {"position":"1800,1325","size":"100,100"}
-+1 fragment
 
-(set: $fragmentos to $fragmentos + 1)
+:: Ending 1 {"position":"725,950","size":"100,100"}
+You turn off the computer, grab your jacket and leave the library.
 
-(set: $destino to "End 2")
+Somewhere, deep within the system, a coded line sighs sadly and deletes itself.
 
-(if: $fragmentos > 0 and $fragmentos <= 2)[
-	(set: $destino to "Scenario 2")
-]
-(else-if: $fragmentos > 2)[
-	(set: $destino to "Scenario 3")
-]
+(align:"=><=")[''The End.'']
 
-[[Go to main hall->$destino]]
-[[Go to letter's archive ->Letter's Archive]] 
-[[Go to whisper's archive ->Whisper's Archive]]
+[[Start Again ->Start Game]]
 
 
-:: Love letter {"position":"1800,75","size":"100,100"}
-+1 fragment
+:: Ending 2 {"position":"2400,650","size":"100,100"}
+Florbela, still incomplete, looks at you.
 
-(set: $fragmentos to $fragmentos + 1)
+(align:"=><=")+(box:"x")[//Thank you for getting to know me and at least trying. 
+Maybe in another lifetime I would have been remembered.//]
 
-(set: $destino to "End 2")
+Florbela is forgotten.
 
-(if: $fragmentos > 0 and $fragmentos <= 2)[
-	(set: $destino to "Scenario 2")
-]
-(else-if: $fragmentos > 2)[
-	(set: $destino to "Scenario 3")
-]
+(align:"=><=")[''The End.'']
 
-[[Go to main hall->$destino]]
-[[Go to whisper's archive ->Whisper's Archive]] 
-[[Go to abandoned room's archive ->Abandoned Room's Archive]]
+[[Start Again ->Start Game]]
 
 
-:: Open File {"position":"950,700","size":"100,100"}
+:: Ending 3 {"position":"2400,800","size":"100,100"}
+Florbela, now not as incomplete, looks at you:
+
+(align:"=><=")+(box:"x")[//Now that you have some of my fragments, what will you do?//]
+
+[[Merge with Florbela as a new poetic entity ->Merge with Florbela]]
+[[Delete the archive to save the system ->Delete Archive]]
+
+
+:: Ending 4 {"position":"2400,950","size":"100,100"}
+Florbela, now complete, looks at you:
+
+(align:"=><=")+(box:"x")[//Now that you have my fragments, what will you do?//]
+
+
+[[Merge with Florbela as a new poetic entity ->Merge with Florbela]]
+[[Delete the archive to save the system ->Delete Archive]]
+[[Set Florbela free -> Ending 5]]
+
+
+:: Entrance room {"position":"950,800","size":"100,100"}
 <audio autoplay>
 <source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/pixeliota_mouse-click-sound.mp3?raw=true">
 </audio>
 
-Player is transported to a distorted version of the library in the 1920's
-They are in the main entrance and suddenly (text-style:"blur")[someone] starts talking to them
+You open the file and the screen freezes. Your body disappears.
+Before you even have time to process anything, you blink and realize you are in a distorted version of the library. The shelves are floating. The walls seem to be alive.
 
-[[Who are you? ->Scenario 1.1]]
-[[Where am I? ->Scenario 1.2]]
+A figure appears before you. It’s Florbela. Or… something similar to her.
+
+(align:"=><=")[//Are you lost… or trying to find me?//]
+
+[[Who are you? ->Florbela's introduction]]
+[[Where am I? ->System's introduction]]
 
 
-:: Poem {"position":"1800,700","size":"100,100"}
-+1 fragment
+:: Florbela's introduction {"position":"1100,725","size":"100,100"}
+(align:"=><=")+(box:"X")[//I am made out of poems and memories… Fragments.
+I was erased once. But part of me resisted.
+I am still here.//]
 
+She holds out her hand. Light erupts from her chest – she seems unstable.
+
+(align:"=><=")[//If you help me retrieve who I once was, perhaps we can get out of here together.//]
+
+[[How can I help you ->Map of the library]]
+
+
+:: Grief letter {"position":"1800,275","size":"100,100"}
+The ink bleeds.
+
+(align:"=><=")[“If our dream was so high and strong, how good I thought it would be to see it until death. To dazzle my heart with light.”]
 (set: $fragmentos to $fragmentos + 1)
+Florbela speaks to you softly:
 
-(set: $destino to "End 2")
+(align:"=><=")[//I lost my brother and, ever since, grief has followed me sometimes. “But what is grief, if not love persevering?”//]
 
-(if: $fragmentos > 0 and $fragmentos <= 2)[
-	(set: $destino to "Scenario 2")
-]
-(else-if: $fragmentos > 2)[
-	(set: $destino to "Scenario 3")
-]
-
-[[Go to main hall->$destino]]
-[[Go to letter's archive ->Letter's Archive]] 
-[[Go to abandoned room's archive ->Abandoned Room's Archive]]
+(align:"=><=")[+1 fragment collected]
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+[[Explore the whispers’ archive ->Whisper's Archive]] 
+[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
+[[Leave->$destino]]
 
 
-:: Rewrite diary {"position":"1800,1075","size":"100,100"}
-+1 fragment
 
+
+:: Incomplete letter {"position":"1800,425","size":"100,100"}
+You see an incomplete poem and write the ending you think Florbela would wish for.
+
+(align:"=><=")+(box:"X")[“I want to love, love madly!
+To love just for the sake of loving: Here... there...
+____________”]
 (set: $fragmentos to $fragmentos + 1)
+After you complete the poem, you hear Florbela:
 
-(set: $destino to "End 2")
+(align:"=><=")[//You… completed me. May your kindness always remain and may you keep completing the others around you.//]
 
-(if: $fragmentos > 0 and $fragmentos <= 2)[
-	(set: $destino to "Scenario 2")
-]
-(else-if: $fragmentos > 2)[
-	(set: $destino to "Scenario 3")
-]
-
-[[Go to main hall->$destino]]
-[[Go to letter's archive ->Letter's Archive]] 
-[[Go to whisper's archive ->Whisper's Archive]]
+(align:"=><=")[+1 fragment collected]
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+[[Explore the whispers’ archive ->Whisper's Archive]] 
+[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
+[[Leave->$destino]]
 
 
-:: Rooms {"position":"1300,700","size":"100,100"}
-The map of the library appears and 3 paths are shown
 
-[[Letter's archive ->Letter's Archive]]
-[[Whispers' archive ->Whisper's Archive]]
-[[Abandoned room's archive ->Abandoned Room's Archive]]
+:: Intro {"position":"800,800","size":"100,100"}
+You’re digitalizing old manuscripts when, all of a sudden, a weirdly named file appears on your screen:
 
+SOUL-F10RB3LA.txt
 
-:: Scenario 1.1 {"position":"1100,625","size":"100,100"}
-Florbela Introduces herself and explain the situation
+It’s getting late and you should probably head home. But a certain curiosity awakens within you… or perhaps… a calling?
 
-[[How can I help you ->Rooms]]
+[[Open File ->Entrance room]] 
+[[Don't touch the computer ->Ending 1]]
 
 
-:: Scenario 1.2 {"position":"1100,775","size":"100,100"}
-System introduces itself and florbela explains the situation
+:: Letter's Archive {"position":"1625,300","size":"100,100"}
+You hold Florbela’s hand, as she guides you through the hallway into a room where letters keep floating, like leaves dancing with the wind in Autumn.
 
-[[How can I help you ->Rooms]]
+(align:"=><=")[//Some of these were written out of a place of love. Others… were written in despair.//]
 
+Three letters appear in front of you:
+* Love Letter;
+* Grief Letter;
+* Incomplete Letter.
+Florbela gestures for you to pick one, but you seem very indecisive. That’s when you hear a quiet voice behind you.
 
-:: Scenario 2 {"position":"2400,725","size":"100,100"}
-[[Merge with Florbela -> End 3]]
-[[Delete Archive -> End 4]]
-
-
-:: Scenario 3 {"position":"2400,850","size":"100,100"}
-[[Merge with Florbela -> End 3]]
-[[Delete Archive -> End 4]]
-[[Set Florbela free -> End 5]]
+[[Continue]]
 
 
-:: Shut voices {"position":"1800,825","size":"100,100"}
-Florbela seems distant.
+:: Listen whisper {"position":"1800,625","size":"100,100"}
+You focus and try to listen closely for the whisper.
 
-(set: $destino to "End 2")
+(align:"=><=")[“To me, he used to be the sun. Then when he left, he became all of the stars.”]
+(set: $fragmentos to $fragmentos + 1)
+Florbela hugs you and a tear rolls down her face. Then the ceiling starts shining with tiny lights, as if you were seeing the stars yourself.
 
-(if: $fragmentos > 0 and $fragmentos <= 2)[
-	(set: $destino to "Scenario 2")
-]
-(else-if: $fragmentos > 2)[
-	(set: $destino to "Scenario 3")
-]
-
-[[Go to main hall->$destino]]
-[[Go to letter's archive ->Letter's Archive]] 
-[[Go to abandoned room's archive ->Abandoned Room's Archive]]
+(align:"=><=")[+1 fragment collected]
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+[[Explore the letters’ archive ->Letter's Archive]] 
+[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
+[[Leave->$destino]]
 
 
-:: Start {"position":"650,800","size":"100,100"}
+
+:: Look mirror {"position":"1800,1425","size":"100,100"}
+The mirror reflects Florbela… but it also reflects yourself. You seem to merge together.
+(set: $fragmentos to $fragmentos + 1)
+(align:"=><=")[//Maybe we are each other’s reflection.//]
+
+(align:"=><=")[+1 fragment collected]
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+[[Explore the letters’ archive ->Letter's Archive]] 
+[[Explore the whisper's archive ->Whisper's Archive]]
+[[Leave->$destino]]
+
+
+
+:: Love letter {"position":"1800,150","size":"100,100"}
+The letter burns in your hands – with such intensity, it seems to even be alive. When you read it, it’s almost as if it’s speaking directly to you.
+(set: $fragmentos to $fragmentos + 1)
+(align:"=><=")[“Blessed be the Moon, which flooded
+the Earth, with light, just to see you.”]
+
+You see Florbela turn to you:
+
+(align:"=><=")+(box:"=XXX=")[//Love was what made me eternal – not by being endless, but by being whole. It can make you eternal too, as long as you let some of it return to the one place it began: you.//]
+
+(align:"=><=")[+1 fragment collected]
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+[[Explore the whispers’ archive ->Whisper's Archive]] 
+[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
+[[Leave->$destino]]
+
+
+
+
+
+
+:: Map of the library {"position":"1325,800","size":"100,100"}
+You’re standing in the middle of the library, in the main hall. The lights flicker and three paths open up in front of you:
+
+* A hallway with floating letters;
+* A wide room with shadows and whispers;
+* A small abandoned room, where the floor is shining and glitching.
+
+(align:"=><=")[//Three places.
+Three fragments.
+Three parts of me.
+
+Please, don’t let me be forgotten.//]
+
+
+[[Explore the letter's archive ->Letter's Archive]]
+[[Explore the whispers' archive ->Whisper's Archive]]
+[[Explore the abandoned room's archive ->Abandoned Room's Archive]]
+
+
+:: Merge with Florbela {"position":"2600,750","size":"100,100"}
+You merge with Florbela and feel your consciousness dissolving into hers.
+
+(align:"=><=")+(box:"x")[//Now we are poets together. An eternal verse.//]
+
+The library becomes alive – a space where all feelings exist and poetry lives forever.
+
+(align:"=><=")[''The End.'']
+
+[[Start Again ->Start Game]]
+
+
+:: Poem {"position":"1800,950","size":"100,100"}
+You dive deep into a verse. There, you see the pain of a poet and the beauty of feeling.
+(set: $fragmentos to $fragmentos + 1)
+(align:"=><=")+(box:"X")[“To be a Poet is to be taller, to be greater
+Than men! To bite as one kisses! 
+It is to be a beggar and to give as one who is
+King of the Kingdom of Here and Beyond Pain!"]
+(align:"=><=")+(box:"X")[//You are more of a poet than you might think.//]
+
+(align:"=><=")[+1 fragment collected]
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+[[Explore the letters’ archive ->Letter's Archive]] 
+[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
+[[Leave->$destino]]
+
+
+
+:: Rewrite diary {"position":"1800,1150","size":"100,100"}
+You use pieces of memories to reconstruct the diary’s entries.
+
+(align:"=><=")[//Even fragmented… I am still me.//]
+(set: $fragmentos to $fragmentos + 1)
+(align:"=><=")[+1 fragment collected]
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+[[Explore the letters’ archive ->Letter's Archive]] 
+[[Explore the whisper's archive ->Whisper's Archive]]
+[[Leave->$destino]]
+
+
+
+:: Shut voices {"position":"1800,800","size":"100,100"}
+You close your eyes for a few seconds. The whispers die and the room gets dark. Then, Florbela asks you:
+
+(align:"=><=")+(box:"X")[//If the pain is silenced… does that mean it disappears?//]
+
+Florbela seems more distant now.
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+[[Explore the letters’ archive ->Letter's Archive]] 
+[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
+[[Leave->$destino]]
+
+
+
+:: Start {"position":"500,800","size":"100,100"}
 <!-- STORY -->
 # Fragmented Memories 
 
@@ -274,37 +358,59 @@ FEUP • Master in Multimedia • Interactive Narratives 24/25//
 (set: $fragmentos to 0)
 
 
-:: Start Game {"position":"800,800","size":"100,100"}
-[[Open File ->Open File]] 
-[[Don't touch the computer ->End 1]]
+:: Start Game {"position":"650,800","size":"100,100"}
+The blue light from the computer fills the dark room you’re standing on, inside the Florbela Espanca Library. 
 
+You always enjoyed being a security guard during the night-shift. The calmness of the library at night always brought you a sense of peace.
 
-:: Whisper's Archive {"position":"1600,700","size":"100,100"}
-The player hears whispers and sees poems flying
-
-[[Focus on listening the whisper ->Listen whisper]]
-[[Enter one of the poems ->Poem]]
-[[Shut the voices ->Shut voices]]
+[[Continue ->Intro]]
 
 
 
-:: Write verse {"position":"1800,1200","size":"100,100"}
-+1 fragment
 
+
+:: System's introduction {"position":"1100,900","size":"100,100"}
+A weird noise fills the room and then you hear a metallic voice:
+
+(align:"=><=")[UNSTABBLE MEMORY DETECTED. CRITICAL STATE OF AN ANOMALY FOUND. F10RB3LA UNITY AT RISK OF TOTAL FAILURE.]
+
+Florbela shrinks in fear.
+
+(align:"=><=")[//The system wants to erase me. But you can rebuild me… as long as you can remember me.//]
+
+[[Continue ->Map of the library]]
+
+
+:: Whisper's Archive {"position":"1600,800","size":"100,100"}
+The sound of your breathing mixes with the whispers. Verses float, like pollen in the air.
+
+(align:"=><=")[“My brother… do you hear me?”]
+
+The system tries to silence the voices.
+
+[[You listen to what Florbela is whispering about her brother ->Listen whisper]]
+[[You try to silence the voices ->Shut voices]]
+[[You go inside a poem ->Poem]]
+
+
+
+
+
+:: Write verse {"position":"1800,1275","size":"100,100"}
+You come up with a new verse.
 (set: $fragmentos to $fragmentos + 1)
+(align:"=><=")[(Write here:) _____]
 
-(set: $destino to "End 2")
+(align:"=><=")[//We are now a poem that never ends.//]
 
-(if: $fragmentos > 0 and $fragmentos <= 2)[
-	(set: $destino to "Scenario 2")
-]
-(else-if: $fragmentos > 2)[
-	(set: $destino to "Scenario 3")
-]
+(align:"=><=")[+1 fragment collected]
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+[[Explore the letters’ archive ->Letter's Archive]] 
+[[Explore the whisper's archive ->Whisper's Archive]]
+[[Leave->$destino]]
 
-[[Go to main hall->$destino]]
-[[Go to letter's archive ->Letter's Archive]] 
-[[Go to whisper's archive ->Whisper's Archive]]
+
 
 
 :: StoryScript [script]
@@ -345,4 +451,3 @@ tw-link.visited {
   /*display: none;*/
   color: white; /* TO DELETE LATER */
 }
-
