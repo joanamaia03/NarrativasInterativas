@@ -197,10 +197,10 @@ Florbela speaks to you softly:
 </audio>
 
 You see an incomplete poem and write the ending you think Florbela would wish for.
-
+(set:$poem to (prompt:"Complete the poem",""))
 (align:"=><=")+(box:"X")[“I want to love, love madly!
-To love just for the sake of loving: Here... there...
-____________”]
+To love just for the sake of loving: Here... there... 
+$poem”]
 (set: $fragmentos to $fragmentos + 1)
 After you complete the poem, you hear Florbela:
 
@@ -223,7 +223,6 @@ It’s getting late and you should probably head home. But a certain curiosity a
 
 [[Open the file ->Entrance room]]
 [[Don't touch the computer ->Ending 1]]
-
 
 
 :: Letter's Archive {"position":"1625,300","size":"100,100"}
