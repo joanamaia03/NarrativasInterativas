@@ -16,6 +16,10 @@ Narrativas
 
 
 :: \ Ending 5 {"position":"2600,1000","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-ending.mp3?raw=true">
+</audio>
+
 Florbela transforms into just light. The distorted library starts to disappear. One last time, you hear her voice:
 
 (align:"=><=")[//I am now a living memory. You saved me.
@@ -33,6 +37,10 @@ You return to the real world, forever touched by what you experienced that night
 
 
 :: Abandoned Room's Archive {"position":"1625,1275","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-abandoned-room.mp3?raw=true">
+</audio>
+
 The walls of the library flicker. The ceiling seems to be failing. Florbela whispers:
 
 (align:"=><=")[//I was torn apart. Help me re-write myself…//]
@@ -56,8 +64,7 @@ You turn around and see a statue of Luís Vaz de Camões. His lips move slowly a
 
 [[Open the love letter  ->Love letter]]
 [[Open the grief letter ->Grief letter]]
-[[ Open the incomplete letter ->Incomplete letter]] 
-
+[[ Open the incomplete letter ->Incomplete letter]]
 
 
 :: Delete Archive {"position":"2600,875","size":"100,100"}
@@ -72,8 +79,11 @@ The library goes back to normal and so does the computer’s screen. No one reme
 [[Start Again ->Start Game]]
 
 
-
 :: Ending 1 {"position":"725,950","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-ending.mp3?raw=true">
+</audio>
+
 You turn off the computer, grab your jacket and leave the library.
 
 Somewhere, deep within the system, a coded line sighs sadly and deletes itself.
@@ -84,6 +94,10 @@ Somewhere, deep within the system, a coded line sighs sadly and deletes itself.
 
 
 :: Ending 2 {"position":"2400,650","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-ending.mp3?raw=true">
+</audio>
+
 Florbela, still incomplete, looks at you.
 
 (align:"=><=")+(box:"x")[//Thank you for getting to know me and at least trying. 
@@ -97,6 +111,10 @@ Florbela is forgotten.
 
 
 :: Ending 3 {"position":"2400,800","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-ending.mp3?raw=true">
+</audio>
+
 Florbela, now not as incomplete, looks at you:
 
 (align:"=><=")+(box:"x")[//Now that you have some of my fragments, what will you do?//]
@@ -106,6 +124,10 @@ Florbela, now not as incomplete, looks at you:
 
 
 :: Ending 4 {"position":"2400,950","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-ending.mp3?raw=true">
+</audio>
+
 Florbela, now complete, looks at you:
 
 (align:"=><=")+(box:"x")[//Now that you have my fragments, what will you do?//]
@@ -118,7 +140,7 @@ Florbela, now complete, looks at you:
 
 :: Entrance room {"position":"950,800","size":"100,100"}
 <audio autoplay>
-<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/pixeliota_mouse-click-sound.mp3?raw=true">
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-transport-to-another-dimension.mp3?raw=true">
 </audio>
 
 You open the file and the screen freezes. Your body disappears.
@@ -133,6 +155,10 @@ A figure appears before you. It’s Florbela. Or… something similar to her.
 
 
 :: Florbela's introduction {"position":"1100,725","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-florbela-introduction.mp3?raw=true">
+</audio>
+
 (align:"=><=")+(box:"X")[//I am made out of poems and memories… Fragments.
 I was erased once. But part of me resisted.
 I am still here.//]
@@ -145,6 +171,10 @@ She holds out her hand. Light erupts from her chest – she seems unstable.
 
 
 :: Grief letter {"position":"1800,275","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
+</audio>
+
 The ink bleeds.
 
 (align:"=><=")[“If our dream was so high and strong, how good I thought it would be to see it until death. To dazzle my heart with light.”]
@@ -161,9 +191,11 @@ Florbela speaks to you softly:
 [[Leave->$destino]]
 
 
-
-
 :: Incomplete letter {"position":"1800,425","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
+</audio>
+
 You see an incomplete poem and write the ending you think Florbela would wish for.
 
 (align:"=><=")+(box:"X")[“I want to love, love madly!
@@ -182,19 +214,23 @@ After you complete the poem, you hear Florbela:
 [[Leave->$destino]]
 
 
-
 :: Intro {"position":"800,800","size":"100,100"}
 You’re digitalizing old manuscripts when, all of a sudden, a weirdly named file appears on your screen:
 
-SOUL-F10RB3LA.txt
+<code>SOUL-F10RB3LA.txt</code>
 
 It’s getting late and you should probably head home. But a certain curiosity awakens within you… or perhaps… a calling?
 
-[[Open File ->Entrance room]] 
+[[Open the file ->Entrance room]]
 [[Don't touch the computer ->Ending 1]]
 
 
+
 :: Letter's Archive {"position":"1625,300","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-letters-archive.mp3?raw=true">
+</audio>
+
 You hold Florbela’s hand, as she guides you through the hallway into a room where letters keep floating, like leaves dancing with the wind in Autumn.
 
 (align:"=><=")[//Some of these were written out of a place of love. Others… were written in despair.//]
@@ -209,6 +245,10 @@ Florbela gestures for you to pick one, but you seem very indecisive. That’s wh
 
 
 :: Listen whisper {"position":"1800,625","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
+</audio>
+
 You focus and try to listen closely for the whisper.
 
 (align:"=><=")[“To me, he used to be the sun. Then when he left, he became all of the stars.”]
@@ -223,8 +263,11 @@ Florbela hugs you and a tear rolls down her face. Then the ceiling starts shinin
 [[Leave->$destino]]
 
 
-
 :: Look mirror {"position":"1800,1425","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
+</audio>
+
 The mirror reflects Florbela… but it also reflects yourself. You seem to merge together.
 (set: $fragmentos to $fragmentos + 1)
 (align:"=><=")[//Maybe we are each other’s reflection.//]
@@ -237,8 +280,11 @@ The mirror reflects Florbela… but it also reflects yourself. You seem to merge
 [[Leave->$destino]]
 
 
-
 :: Love letter {"position":"1800,150","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
+</audio>
+
 The letter burns in your hands – with such intensity, it seems to even be alive. When you read it, it’s almost as if it’s speaking directly to you.
 (set: $fragmentos to $fragmentos + 1)
 (align:"=><=")[“Blessed be the Moon, which flooded
@@ -256,11 +302,11 @@ You see Florbela turn to you:
 [[Leave->$destino]]
 
 
-
-
-
-
 :: Map of the library {"position":"1325,800","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-main-hall.mp3?raw=true">
+</audio>
+
 You’re standing in the middle of the library, in the main hall. The lights flicker and three paths open up in front of you:
 
 * A hallway with floating letters;
@@ -280,6 +326,10 @@ Please, don’t let me be forgotten.//]
 
 
 :: Merge with Florbela {"position":"2600,750","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-ending.mp3?raw=true">
+</audio>
+
 You merge with Florbela and feel your consciousness dissolving into hers.
 
 (align:"=><=")+(box:"x")[//Now we are poets together. An eternal verse.//]
@@ -292,6 +342,10 @@ The library becomes alive – a space where all feelings exist and poetry lives 
 
 
 :: Poem {"position":"1800,950","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
+</audio>
+
 You dive deep into a verse. There, you see the pain of a poet and the beauty of feeling.
 (set: $fragmentos to $fragmentos + 1)
 (align:"=><=")+(box:"X")[“To be a Poet is to be taller, to be greater
@@ -308,8 +362,11 @@ King of the Kingdom of Here and Beyond Pain!"]
 [[Leave->$destino]]
 
 
-
 :: Rewrite diary {"position":"1800,1150","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
+</audio>
+
 You use pieces of memories to reconstruct the diary’s entries.
 
 (align:"=><=")[//Even fragmented… I am still me.//]
@@ -320,7 +377,6 @@ You use pieces of memories to reconstruct the diary’s entries.
 [[Explore the letters’ archive ->Letter's Archive]] 
 [[Explore the whisper's archive ->Whisper's Archive]]
 [[Leave->$destino]]
-
 
 
 :: Shut voices {"position":"1800,800","size":"100,100"}
@@ -334,7 +390,6 @@ Florbela seems more distant now.
 [[Explore the letters’ archive ->Letter's Archive]] 
 [[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
 [[Leave->$destino]]
-
 
 
 :: Start {"position":"500,800","size":"100,100"}
@@ -359,14 +414,15 @@ FEUP • Master in Multimedia • Interactive Narratives 24/25//
 
 
 :: Start Game {"position":"650,800","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-intro.mp3?raw=true">
+</audio>
+
 The blue light from the computer fills the dark room you’re standing on, inside the Florbela Espanca Library. 
 
 You always enjoyed being a security guard during the night-shift. The calmness of the library at night always brought you a sense of peace.
 
 [[Continue ->Intro]]
-
-
-
 
 
 :: System's introduction {"position":"1100,900","size":"100,100"}
@@ -382,6 +438,10 @@ Florbela shrinks in fear.
 
 
 :: Whisper's Archive {"position":"1600,800","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-whispers-archive.mp3?raw=true">
+</audio>
+
 The sound of your breathing mixes with the whispers. Verses float, like pollen in the air.
 
 (align:"=><=")[“My brother… do you hear me?”]
@@ -393,10 +453,11 @@ The system tries to silence the voices.
 [[You go inside a poem ->Poem]]
 
 
-
-
-
 :: Write verse {"position":"1800,1275","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
+</audio>
+
 You come up with a new verse.
 (set: $fragmentos to $fragmentos + 1)
 (align:"=><=")[(Write here:) _____]
@@ -411,12 +472,11 @@ You come up with a new verse.
 [[Leave->$destino]]
 
 
-
-
 :: StoryScript [script]
 var bgm = document.createElement('audio');
-bgm.src = 'https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/zhr_soft-music.mp3?raw=true';
+bgm.src = 'https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-ambiance-rain.mp3?raw=true';
 bgm.loop = true;
+bgm.volume = 0.1;
 bgm.play();
 
 :: StoryStylesheet [stylesheet]
