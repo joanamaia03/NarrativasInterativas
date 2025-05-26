@@ -15,21 +15,153 @@ Narrativas
 }
 
 
+:: \ Continue11 {"position":"1975,425","size":"100,100"}
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/lettersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+(set:$poem to (prompt:"Complete the poem",""))
+“I want to love, love madly!
+To love just for the sake of loving: Here... there... 
+$poem”
+[[Continue -> Continue12]]
+</div>
+
+
+:: \ Continue12 {"position":"1975,550","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
+</audio>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/lettersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+(set: $fragmentos to $fragmentos + 1)
+After you complete the poem, you hear Florbela:
+"You… completed me. May your kindness always remain and may you keep completing the others around you."
+(align:"=><=")[+1 fragment collected]
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+[[Explore the whispers’ archive ->Whisper's Archive]] 
+[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
+[[Leave->$destino]]
+</div>
+
+
+:: \ Continue13 {"position":"1975,675","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
+</audio>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/whispersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+(set: $fragmentos to $fragmentos + 1)
+(align:"=><=")[+1 fragment collected]
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+[[Explore the letters’ archive ->Letter's Archive]] 
+[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
+[[Leave->$destino]]
+
+
+:: \ Continue16 {"position":"1625,1400","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-abandoned-room.mp3?raw=true">
+</audio>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/abandonedsArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+In front of you there are 3 objects:
+A diary in very poor conditions &nbsp;&nbsp;•&nbsp;&nbsp; A blank page &nbsp;&nbsp;•&nbsp;&nbsp; A broken mirror
+How do you choose to help Florbela?
+[[Reconstruct the diary ->Rewrite diary]] 
+[[Write a new text ->Write verse]]
+[[Look into the mirror ->Look mirror]]
+</div>
+
+
+:: \ Continue17 {"position":"1925,1275","size":"100,100"}
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/abandonedsArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+(set:$verse to (prompt:"Write a new verse",""))
+Your verse: $verse”
+[[Continue -> Continue18]]
+</div>
+
+
+:: \ Continue18 {"position":"2050,1275","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
+</audio>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/abandonedsArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+"We are now a poem that never ends."
+(set: $fragmentos to $fragmentos + 1)
+(align:"=><=")[+1 fragment collected]
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+[[Explore the letters’ archive ->Letter's Archive]] 
+[[Explore the whisper's archive ->Whisper's Archive]]
+[[Leave->$destino]]
+</div>
+
+
+:: \ Continue8 {"position":"1625,50","size":"100,100"}
+<div style="display: flex; justify-content: center; align-items: center; height: 70vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/continue.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+What do you think you need to read about the most?
+[[Open the love letter  ->Love letter]]
+[[Open the grief letter ->Grief letter]]
+[[ Open the incomplete letter ->Incomplete letter]]
+</div>
+
+
 :: \ Ending 5 {"position":"2600,1000","size":"100,100"}
 <audio autoplay>
 <source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-ending.mp3?raw=true">
 </audio>
 
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/end5.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 Florbela transforms into just light. The distorted library starts to disappear. One last time, you hear her voice:
-
-(align:"=><=")[//I am now a living memory. You saved me.
-Thank you for not letting me be forgotten.//]
-
+"I am now a living memory. You saved me. Thank you for not letting me be forgotten."
 You return to the real world, forever touched by what you experienced that night.
+''The End.'' &nbsp;&nbsp;•&nbsp;&nbsp; [[Start Again ->Start Game]]
+</div>
 
-(align:"=><=")[''The End'']
 
-[[Start Again ->Start Game]]
+:: \ Intro 2 {"position":"800,950","size":"100,100"}
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/intro.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+It’s getting late and you should probably head home. But a certain curiosity awakens within you… or perhaps… a calling?
+[[Open the file ->Entrance room]]
+[[Don't touch the computer ->Ending 1]]
+</div>
+
 
 
 :: $destino {"position":"2175,800","size":"100,100"}
@@ -41,56 +173,219 @@ You return to the real world, forever touched by what you experienced that night
 <source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-abandoned-room.mp3?raw=true">
 </audio>
 
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/abandonedsArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 The walls of the library flicker. The ceiling seems to be failing. Florbela whispers:
-
-(align:"=><=")[//I was torn apart. Help me re-write myself…//]
-
-In front of you there are 3 objects:
-* A diary in very poor conditions;
-* A blank page;
-* A broken mirror.
-
-How do you choose to help Florbela?
-
-[[Reconstruct the diary ->Rewrite diary]] 
-[[Write a new text ->Write verse]]
-[[Look into the mirror ->Look mirror]]
+"I was torn apart. Help me re-write myself…"
+[[Continue -> Continue16]]
+</div>     
 
 
-:: Continue {"position":"1625,425","size":"100,100"}
+:: Continue10 {"position":"1975,300","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
+</audio>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/lettersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+Florbela speaks to you softly:
+"I lost my brother and, ever since, grief has followed me sometimes. But what is grief, if not love persevering?”
+(set: $fragmentos to $fragmentos + 1)
+(align:"=><=")[+1 fragment collected]
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+[[Explore the whispers’ archive ->Whisper's Archive]] 
+[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
+[[Leave->$destino]]
+</div>
+
+
+:: Continue14 {"position":"1975,800","size":"100,100"}
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/whispersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+Florbela seems more distant now.
+[[Explore the letters’ archive ->Letter's Archive]] 
+[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
+[[Leave->$destino]]
+</div>
+
+
+:: Continue15 {"position":"1975,950","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
+</audio>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/whispersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+"You are more of a poet than you might think."
+(set: $fragmentos to $fragmentos + 1)
+(align:"=><=")[+1 fragment collected]
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+[[Explore the letters’ archive ->Letter's Archive]] 
+[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
+[[Leave->$destino]]
+</div>
+
+
+
+:: Continue2 {"position":"1275,675","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-florbela-introduction.mp3?raw=true">
+</audio>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/florbela.gif?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+She holds out her hand. Light erupts from her chest – she seems unstable.
+"If you help me retrieve who I once was, perhaps we can get out of here together."
+[[How can I help you ->Map of the library]]
+</div>
+
+
+:: Continue3 {"position":"1225,975","size":"100,100"}
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/system.gif?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+Florbela shrinks in fear.
+"The system wants to erase me. But you can rebuild me… as long as you can remember me."
+[[Continue ->Map of the library]]
+</div>
+
+
+:: Continue4 {"position":"1425,925","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-main-hall.mp3?raw=true">
+</audio>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/map.gif?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+"Three places. Three fragments. Three parts of me. Please, don’t let me be forgotten."
+[[Explore the letter's archive ->Letter's Archive]]
+[[Explore the whispers' archive ->Whisper's Archive]]
+[[Explore the abandoned room's archive ->Abandoned Room's Archive]]
+</div>
+
+
+:: Continue5 {"position":"1650,800","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-whispers-archive.mp3?raw=true">
+</audio>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/whispersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+The system tries to silence the voices.
+[[You listen to what Florbela is whispering about her brother ->Listen whisper]]
+[[You try to silence the voices ->Shut voices]]
+[[You go inside a poem ->Poem]]
+</div>
+
+
+:: Continue6 {"position":"1500,300","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-letters-archive.mp3?raw=true">
+</audio>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/lettersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+Three letters appear in front of you:
+Love Letter &nbsp;&nbsp;•&nbsp;&nbsp; Grief Letter &nbsp;&nbsp;•&nbsp;&nbsp; Incomplete Letter
+Florbela gestures for you to pick one, but you seem very indecisive. That’s when you hear a quiet voice behind you.
+[[Continue ->Continue7]]
+</div>
+
+
+:: Continue7 {"position":"1625,175","size":"100,100"}
+<div style="display: flex; justify-content: center; align-items: center; height: 70vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/continue.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 You turn around and see a statue of Luís Vaz de Camões. His lips move slowly and you can hear him talking to you softly. 
+"Fear not what to choose. Look within your heart and connect with your own feelings." 
+[[Continue -> Continue8]]
+</div>
 
-(align:"=><=")+(box:"X")[//Fear not what to choose. Look within your heart and connect with your own feelings. What do you think you need to read about the most?//]
 
-[[Open the love letter  ->Love letter]]
-[[Open the grief letter ->Grief letter]]
-[[ Open the incomplete letter ->Incomplete letter]]
+:: Continue9 {"position":"1975,150","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
+</audio>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/lettersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+You see Florbela turn to you:
+"Love was what made me eternal – not by being endless, but by being whole. It can make you eternal too, as long as you let some of it return to the one place it began: you."
+(set: $fragmentos to $fragmentos + 1)
+(align:"=><=")[+1 fragment collected]
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+[[Explore the whispers’ archive ->Whisper's Archive]] 
+[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
+[[Leave->$destino]]
 
 
 :: Delete Archive {"position":"2600,875","size":"100,100"}
-You press the “Del” key. Everything vanishes. You hear nothing but your own heartbeat.
-
-The library goes back to normal and so does the computer’s screen. No one remembers the name “Florbela Espanca”.
-
-(align:"=><=")[//Nothing hurts, but nothing lives.//]
-
-(align:"=><=")[''The End.'']
-
-[[Start Again ->Start Game]]
-
-
-:: Ending 1 {"position":"725,950","size":"100,100"}
 <audio autoplay>
 <source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-ending.mp3?raw=true">
 </audio>
 
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/delete.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+You press the “Delete” key. Everything vanishes. You hear nothing but your own heartbeat.
+The library goes back to normal and so does the computer’s screen. No one remembers the name “Florbela Espanca”.
+"Nothing hurts, but nothing lives."
+''The End.'' &nbsp;&nbsp;•&nbsp;&nbsp; [[Start Again ->Start Game]]
+</div>    
+
+
+:: Ending 1 {"position":"650,950","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-ending.mp3?raw=true">
+</audio>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/end1.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 You turn off the computer, grab your jacket and leave the library.
-
 Somewhere, deep within the system, a coded line sighs sadly and deletes itself.
-
-(align:"=><=")[''The End.'']
-
-[[Start Again ->Start Game]]
+''The End.'' &nbsp;&nbsp;•&nbsp;&nbsp; [[Start Again ->Start Game]]
+</div>
 
 
 :: Ending 2 {"position":"2400,650","size":"100,100"}
@@ -98,16 +393,17 @@ Somewhere, deep within the system, a coded line sighs sadly and deletes itself.
 <source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-ending.mp3?raw=true">
 </audio>
 
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/end2.gif?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 Florbela, still incomplete, looks at you.
-
-(align:"=><=")+(box:"x")[//Thank you for getting to know me and at least trying. 
-Maybe in another lifetime I would have been remembered.//]
-
+"Thank you for getting to know me and at least trying. Maybe in another lifetime I would have been remembered."
 Florbela is forgotten.
-
-(align:"=><=")[''The End.'']
-
-[[Start Again ->Start Game]]
+''The End.'' &nbsp;&nbsp;•&nbsp;&nbsp; [[Start Again ->Start Game]]
+</div>
+ 
 
 
 :: Ending 3 {"position":"2400,800","size":"100,100"}
@@ -115,12 +411,16 @@ Florbela is forgotten.
 <source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-ending.mp3?raw=true">
 </audio>
 
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/end3.gif?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 Florbela, now not as incomplete, looks at you:
-
-(align:"=><=")+(box:"x")[//Now that you have some of my fragments, what will you do?//]
-
+"Now that you have some of my fragments, what will you do?"
 [[Merge with Florbela as a new poetic entity ->Merge with Florbela]]
 [[Delete the archive to save the system ->Delete Archive]]
+</div>
 
 
 :: Ending 4 {"position":"2400,950","size":"100,100"}
@@ -128,14 +428,18 @@ Florbela, now not as incomplete, looks at you:
 <source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-ending.mp3?raw=true">
 </audio>
 
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/end4.gif?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 Florbela, now complete, looks at you:
-
-(align:"=><=")+(box:"x")[//Now that you have my fragments, what will you do?//]
-
-
+"Now that you have my fragments, what will you do?"
 [[Merge with Florbela as a new poetic entity ->Merge with Florbela]]
 [[Delete the archive to save the system ->Delete Archive]]
 [[Set Florbela free -> Ending 5]]
+</div>
+
 
 
 :: Entrance room {"position":"950,800","size":"100,100"}
@@ -143,15 +447,34 @@ Florbela, now complete, looks at you:
 <source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-transport-to-another-dimension.mp3?raw=true">
 </audio>
 
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/entrance.gif?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 You open the file and the screen freezes. Your body disappears.
 Before you even have time to process anything, you blink and realize you are in a distorted version of the library. The shelves are floating. The walls seem to be alive.
+[[Continue ->Florbela]]
+</div>
 
+
+
+:: Florbela {"position":"950,950","size":"100,100"}
+<audio autoplay>
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-transport-to-another-dimension.mp3?raw=true">
+</audio>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/florbela.gif?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 A figure appears before you. It’s Florbela. Or… something similar to her.
-
-(align:"=><=")[//Are you lost… or trying to find me?//]
-
+"Are you lost… or trying to find me?"
 [[Who are you? ->Florbela's introduction]]
 [[Where am I? ->System's introduction]]
+</div>
+
 
 
 :: Florbela's introduction {"position":"1100,725","size":"100,100"}
@@ -159,70 +482,56 @@ A figure appears before you. It’s Florbela. Or… something similar to her.
 <source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-florbela-introduction.mp3?raw=true">
 </audio>
 
-(align:"=><=")+(box:"X")[//I am made out of poems and memories… Fragments.
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/florbela.gif?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
+"I am made out of poems and memories… Fragments.
 I was erased once. But part of me resisted.
-I am still here.//]
-
-She holds out her hand. Light erupts from her chest – she seems unstable.
-
-(align:"=><=")[//If you help me retrieve who I once was, perhaps we can get out of here together.//]
-
-[[How can I help you ->Map of the library]]
+I am still here."
+[[Continue->Continue2]]
+</div>
 
 
-:: Grief letter {"position":"1800,275","size":"100,100"}
-<audio autoplay>
-<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
-</audio>
 
+:: Grief letter {"position":"1800,300","size":"100,100"}
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/lettersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa">
 The ink bleeds.
+“If our dream was so high and strong, how good I thought it would be to see it until death. To dazzle my heart with light.”
+[[Continue ->Continue10]]
+</div>
 
-(align:"=><=")[“If our dream was so high and strong, how good I thought it would be to see it until death. To dazzle my heart with light.”]
-(set: $fragmentos to $fragmentos + 1)
-Florbela speaks to you softly:
-
-(align:"=><=")[//I lost my brother and, ever since, grief has followed me sometimes. “But what is grief, if not love persevering?”//]
-
-(align:"=><=")[+1 fragment collected]
-(set: $destino to "Ending 2")
-(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
-[[Explore the whispers’ archive ->Whisper's Archive]] 
-[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
-[[Leave->$destino]]
 
 
 :: Incomplete letter {"position":"1800,425","size":"100,100"}
-<audio autoplay>
-<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
-</audio>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/lettersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
 
+<div class="caixa"> 
 You see an incomplete poem and write the ending you think Florbela would wish for.
-(set:$poem to (prompt:"Complete the poem",""))
-(align:"=><=")+(box:"X")[“I want to love, love madly!
+“I want to love, love madly!
 To love just for the sake of loving: Here... there... 
-$poem”]
-(set: $fragmentos to $fragmentos + 1)
-After you complete the poem, you hear Florbela:
-
-(align:"=><=")[//You… completed me. May your kindness always remain and may you keep completing the others around you.//]
-
-(align:"=><=")[+1 fragment collected]
-(set: $destino to "Ending 2")
-(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
-[[Explore the whispers’ archive ->Whisper's Archive]] 
-[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
-[[Leave->$destino]]
+[[Complete the letter -> Continue11]]
+</div>
 
 
 :: Intro {"position":"800,800","size":"100,100"}
-You’re digitalizing old manuscripts when, all of a sudden, a weirdly named file appears on your screen:
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/intro.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
 
+<div class="caixa"> 
+You’re digitalizing old manuscripts when, all of a sudden, a weirdly named file appears on your screen: 
 <code>SOUL-F10RB3LA.txt</code>
+[[Continue -> Intro 2]]
+</div>
 
-It’s getting late and you should probably head home. But a certain curiosity awakens within you… or perhaps… a calling?
-
-[[Open the file ->Entrance room]]
-[[Don't touch the computer ->Ending 1]]
 
 
 :: Letter's Archive {"position":"1625,300","size":"100,100"}
@@ -230,36 +539,30 @@ It’s getting late and you should probably head home. But a certain curiosity a
 <source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-letters-archive.mp3?raw=true">
 </audio>
 
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/lettersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 You hold Florbela’s hand, as she guides you through the hallway into a room where letters keep floating, like leaves dancing with the wind in Autumn.
+"Some of these were written out of a place of love. Others… were written in despair."
+[[Continue ->Continue6]]
+</div>
 
-(align:"=><=")[//Some of these were written out of a place of love. Others… were written in despair.//]
-
-Three letters appear in front of you:
-* Love Letter;
-* Grief Letter;
-* Incomplete Letter.
-Florbela gestures for you to pick one, but you seem very indecisive. That’s when you hear a quiet voice behind you.
-
-[[Continue]]
 
 
 :: Listen whisper {"position":"1800,625","size":"100,100"}
-<audio autoplay>
-<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
-</audio>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/whispersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
 
+<div class="caixa"> 
 You focus and try to listen closely for the whisper.
-
-(align:"=><=")[“To me, he used to be the sun. Then when he left, he became all of the stars.”]
-(set: $fragmentos to $fragmentos + 1)
+“To me, he used to be the sun. Then when he left, he became all of the stars.”
 Florbela hugs you and a tear rolls down her face. Then the ceiling starts shining with tiny lights, as if you were seeing the stars yourself.
+[[Continue -> Continue13]]
+</div>
 
-(align:"=><=")[+1 fragment collected]
-(set: $destino to "Ending 2")
-(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
-[[Explore the letters’ archive ->Letter's Archive]] 
-[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
-[[Leave->$destino]]
 
 
 :: Look mirror {"position":"1800,1425","size":"100,100"}
@@ -267,38 +570,34 @@ Florbela hugs you and a tear rolls down her face. Then the ceiling starts shinin
 <source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
 </audio>
 
-The mirror reflects Florbela… but it also reflects yourself. You seem to merge together.
-(set: $fragmentos to $fragmentos + 1)
-(align:"=><=")[//Maybe we are each other’s reflection.//]
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/abandonedsArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
 
+<div class="caixa"> 
+The mirror reflects Florbela… but it also reflects yourself. You seem to merge together.
+"Maybe we are each other’s reflection."
+(set: $fragmentos to $fragmentos + 1)
 (align:"=><=")[+1 fragment collected]
 (set: $destino to "Ending 2")
 (if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
 [[Explore the letters’ archive ->Letter's Archive]] 
 [[Explore the whisper's archive ->Whisper's Archive]]
 [[Leave->$destino]]
+</div>   
 
 
 :: Love letter {"position":"1800,150","size":"100,100"}
-<audio autoplay>
-<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
-</audio>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/lettersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
 
+<div class="caixa"> 
 The letter burns in your hands – with such intensity, it seems to even be alive. When you read it, it’s almost as if it’s speaking directly to you.
-(set: $fragmentos to $fragmentos + 1)
-(align:"=><=")[“Blessed be the Moon, which flooded
-the Earth, with light, just to see you.”]
+“Blessed be the Moon, which flooded the Earth, with light, just to see you.”
+[[Continue ->Continue9]]
+</div>
 
-You see Florbela turn to you:
-
-(align:"=><=")+(box:"=XXX=")[//Love was what made me eternal – not by being endless, but by being whole. It can make you eternal too, as long as you let some of it return to the one place it began: you.//]
-
-(align:"=><=")[+1 fragment collected]
-(set: $destino to "Ending 2")
-(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
-[[Explore the whispers’ archive ->Whisper's Archive]] 
-[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
-[[Leave->$destino]]
 
 
 :: Map of the library {"position":"1325,800","size":"100,100"}
@@ -306,22 +605,17 @@ You see Florbela turn to you:
 <source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-main-hall.mp3?raw=true">
 </audio>
 
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/map.gif?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 You’re standing in the middle of the library, in the main hall. The lights flicker and three paths open up in front of you:
-
-* A hallway with floating letters;
-* A wide room with shadows and whispers;
-* A small abandoned room, where the floor is shining and glitching.
-
-(align:"=><=")[//Three places.
-Three fragments.
-Three parts of me.
-
-Please, don’t let me be forgotten.//]
-
-
-[[Explore the letter's archive ->Letter's Archive]]
-[[Explore the whispers' archive ->Whisper's Archive]]
-[[Explore the abandoned room's archive ->Abandoned Room's Archive]]
+- A hallway with floating letters;
+- A wide room with shadows and whispers;
+- A small abandoned room, where the floor is shining and glitching.
+[[Continue ->Continue4]]
+</div>
 
 
 :: Merge with Florbela {"position":"2600,750","size":"100,100"}
@@ -329,36 +623,29 @@ Please, don’t let me be forgotten.//]
 <source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-ending.mp3?raw=true">
 </audio>
 
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/merge.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 You merge with Florbela and feel your consciousness dissolving into hers.
-
-(align:"=><=")+(box:"x")[//Now we are poets together. An eternal verse.//]
-
+"Now we are poets together. An eternal verse."
 The library becomes alive – a space where all feelings exist and poetry lives forever.
-
-(align:"=><=")[''The End.'']
-
-[[Start Again ->Start Game]]
+''The End.'' &nbsp;&nbsp;•&nbsp;&nbsp; [[Start Again ->Start Game]]
+</div>
 
 
 :: Poem {"position":"1800,950","size":"100,100"}
-<audio autoplay>
-<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
-</audio>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/whispersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
 
+<div class="caixa"> 
 You dive deep into a verse. There, you see the pain of a poet and the beauty of feeling.
-(set: $fragmentos to $fragmentos + 1)
-(align:"=><=")+(box:"X")[“To be a Poet is to be taller, to be greater
-Than men! To bite as one kisses! 
-It is to be a beggar and to give as one who is
-King of the Kingdom of Here and Beyond Pain!"]
-(align:"=><=")+(box:"X")[//You are more of a poet than you might think.//]
-
-(align:"=><=")[+1 fragment collected]
-(set: $destino to "Ending 2")
-(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
-[[Explore the letters’ archive ->Letter's Archive]] 
-[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
-[[Leave->$destino]]
+“To be a Poet is to be taller, to be greater Than men! To bite as one kisses! 
+It is to be a beggar and to give as one who is King of the Kingdom of Here and Beyond Pain!"
+[[Continue ->Continue15]]
+</div>    
 
 
 :: Rewrite diary {"position":"1800,1150","size":"100,100"}
@@ -366,9 +653,13 @@ King of the Kingdom of Here and Beyond Pain!"]
 <source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
 </audio>
 
-You use pieces of memories to reconstruct the diary’s entries.
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/abandonedsArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
 
-(align:"=><=")[//Even fragmented… I am still me.//]
+<div class="caixa"> 
+You use pieces of memories to reconstruct the diary’s entries.
+"Even fragmented… I am still me."
 (set: $fragmentos to $fragmentos + 1)
 (align:"=><=")[+1 fragment collected]
 (set: $destino to "Ending 2")
@@ -376,19 +667,19 @@ You use pieces of memories to reconstruct the diary’s entries.
 [[Explore the letters’ archive ->Letter's Archive]] 
 [[Explore the whisper's archive ->Whisper's Archive]]
 [[Leave->$destino]]
+</div>
 
 
 :: Shut voices {"position":"1800,800","size":"100,100"}
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/whispersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 You close your eyes for a few seconds. The whispers die and the room gets dark. Then, Florbela asks you:
-
-(align:"=><=")+(box:"X")[//If the pain is silenced… does that mean it disappears?//]
-
-Florbela seems more distant now.
-(set: $destino to "Ending 2")
-(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
-[[Explore the letters’ archive ->Letter's Archive]] 
-[[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
-[[Leave->$destino]]
+"If the pain is silenced… does that mean it disappears?"
+[[Continue ->Continue14]]
+</div>
 
 
 :: Start {"position":"500,800","size":"100,100"}
@@ -407,68 +698,76 @@ Ana Ramos, Beatriz Barros, Catarina Silva, Joana Maia
 FEUP • Master in Multimedia • Interactive Narratives 24/25//
 ]
 <!-- FOOTER -->
-
 <!-- CODE -->
 (set: $fragmentos to 0)
+(set: $visitouSala1 to false)
+(set: $visitouSala2 to false)
+(set: $visitouSala3 to false)
+(set: $visitouSala4 to false)
+(set: $visitouSala5 to false)
+(set: $visitouSala6 to false)
+(set: $visitouSala7 to false)
+(set: $visitouSala8 to false)
+(set: $visitouSala9 to false)
 
 
 :: Start Game {"position":"650,800","size":"100,100"}
 <audio autoplay>
-<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-intro.mp3?raw=true">
+<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/music/music-intro.mp3?raw=true" >
 </audio>
 
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/startGame.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 The blue light from the computer fills the dark room you’re standing on, inside the Florbela Espanca Library. 
-
-You always enjoyed being a security guard during the night-shift. The calmness of the library at night always brought you a sense of peace.
-
+You always enjoyed being a security guard during the night-shift. The calmness of the library at night always brought you a sense of peace
 [[Continue ->Intro]]
+</div>
 
 
 :: System's introduction {"position":"1100,900","size":"100,100"}
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/system.gif?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 A weird noise fills the room and then you hear a metallic voice:
-
-(align:"=><=")[UNSTABBLE MEMORY DETECTED. CRITICAL STATE OF AN ANOMALY FOUND. F10RB3LA UNITY AT RISK OF TOTAL FAILURE.]
-
-Florbela shrinks in fear.
-
-(align:"=><=")[//The system wants to erase me. But you can rebuild me… as long as you can remember me.//]
-
-[[Continue ->Map of the library]]
+UNSTABLE MEMORY DETECTED. CRITICAL STATE OF AN ANOMALY FOUND. F10RB3LA UNITY AT RISK OF TOTAL FAILURE.
+[[Continue->Continue3]]
+</div>
 
 
-:: Whisper's Archive {"position":"1600,800","size":"100,100"}
+
+:: Whisper's Archive {"position":"1500,800","size":"100,100"}
 <audio autoplay>
 <source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-whispers-archive.mp3?raw=true">
 </audio>
 
+<div style="display: flex; justify-content: center; align-items: center; height: 45vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/whispersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
+
+<div class="caixa"> 
 The sound of your breathing mixes with the whispers. Verses float, like pollen in the air.
+“My brother… do you hear me?”
+[[Continue->Continue5]]
+</div>
 
-(align:"=><=")[“My brother… do you hear me?”]
-
-The system tries to silence the voices.
-
-[[You listen to what Florbela is whispering about her brother ->Listen whisper]]
-[[You try to silence the voices ->Shut voices]]
-[[You go inside a poem ->Poem]]
 
 
 :: Write verse {"position":"1800,1275","size":"100,100"}
-<audio autoplay>
-<source src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/sfx/sfx-fragment.mp3?raw=true">
-</audio>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh;">
+<img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/abandonedsArchive.png?raw=true" alt="Imagem" width="800" height=auto>
+</div>
 
+<div class="caixa"> 
 You come up with a new verse.
-(set: $fragmentos to $fragmentos + 1)
-(align:"=><=")[(Write here:) _____]
+(Write here:) _____
+[[Write new verse -> Continue17]]
+</div>
 
-(align:"=><=")[//We are now a poem that never ends.//]
-
-(align:"=><=")[+1 fragment collected]
-(set: $destino to "Ending 2")
-(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
-[[Explore the letters’ archive ->Letter's Archive]] 
-[[Explore the whisper's archive ->Whisper's Archive]]
-[[Leave->$destino]]
 
 
 :: StoryScript [script]
@@ -487,14 +786,19 @@ tw-story{
   
   /* text */
   color: #f5e9d1; /* light brown */
+ }
+ 
+.caixa {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color:#1e140a;
+  color: white;
+  padding: 0.5em;
+  font-size: 0.7em;
+  text-align: center;
 }
-
-/* PASSAGES */
-
-/*tw-passage{
-  background-image: url("https://raw.githubusercontent.com/joanamaia03/NarrativasInterativas/main/images/image0.png");
-}*/
-
 
 /* HYPERLINKS */
 
@@ -508,5 +812,5 @@ tw-link:hover {
 
 tw-link.visited {
   /*display: none;*/
-  color: white; /* TO DELETE LATER */
+  color:#f5e9d1; /* TO DELETE LATER */
 }
