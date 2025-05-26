@@ -38,13 +38,14 @@ $poem”
 <img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/lettersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
 </div>
 
-<div class="caixa"> 
 (set: $fragmentos to $fragmentos + 1)
-After you complete the poem, you hear Florbela:
-"You… completed me. May your kindness always remain and may you keep completing the others around you."
-(align:"=><=")[+1 fragment collected]
 (set: $destino to "Ending 2")
 (if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+
+<div class="caixa"> 
+After you complete the poem, you hear Florbela:
+"You… completed me. May your kindness always remain and may you keep completing the others around you."
++1 fragment collected
 [[Explore the whispers’ archive ->Whisper's Archive]] 
 [[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
 [[Leave->$destino]]
@@ -61,12 +62,14 @@ After you complete the poem, you hear Florbela:
 </div>
 
 (set: $fragmentos to $fragmentos + 1)
-(align:"=><=")[+1 fragment collected]
 (set: $destino to "Ending 2")
 (if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+
+<div class="caixa">
 [[Explore the letters’ archive ->Letter's Archive]] 
 [[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
 [[Leave->$destino]]
+</div>
 
 
 :: \ Continue16 {"position":"1625,1400","size":"100,100"}
@@ -109,12 +112,13 @@ Your verse: $verse”
 <img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/abandonedsArchive.png?raw=true" alt="Imagem" width="800" height=auto>
 </div>
 
-<div class="caixa"> 
-"We are now a poem that never ends."
 (set: $fragmentos to $fragmentos + 1)
-(align:"=><=")[+1 fragment collected]
 (set: $destino to "Ending 2")
 (if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+
+<div class="caixa"> 
+"We are now a poem that never ends."
++1 fragment collected
 [[Explore the letters’ archive ->Letter's Archive]] 
 [[Explore the whisper's archive ->Whisper's Archive]]
 [[Leave->$destino]]
@@ -193,13 +197,14 @@ The walls of the library flicker. The ceiling seems to be failing. Florbela whis
 <img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/lettersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
 </div>
 
+(set: $fragmentos to $fragmentos + 1)
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+
 <div class="caixa"> 
 Florbela speaks to you softly:
 "I lost my brother and, ever since, grief has followed me sometimes. But what is grief, if not love persevering?”
-(set: $fragmentos to $fragmentos + 1)
-(align:"=><=")[+1 fragment collected]
-(set: $destino to "Ending 2")
-(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
++1 fragment collected
 [[Explore the whispers’ archive ->Whisper's Archive]] 
 [[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
 [[Leave->$destino]]
@@ -211,9 +216,10 @@ Florbela speaks to you softly:
 <img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/whispersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
 </div>
 
-<div class="caixa"> 
 (set: $destino to "Ending 2")
 (if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+
+<div class="caixa"> 
 Florbela seems more distant now.
 [[Explore the letters’ archive ->Letter's Archive]] 
 [[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
@@ -230,12 +236,13 @@ Florbela seems more distant now.
 <img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/whispersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
 </div>
 
-<div class="caixa"> 
-"You are more of a poet than you might think."
 (set: $fragmentos to $fragmentos + 1)
-(align:"=><=")[+1 fragment collected]
 (set: $destino to "Ending 2")
 (if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+
+<div class="caixa"> 
+"You are more of a poet than you might think."
++1 fragment collected
 [[Explore the letters’ archive ->Letter's Archive]] 
 [[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
 [[Leave->$destino]]
@@ -343,13 +350,14 @@ You turn around and see a statue of Luís Vaz de Camões. His lips move slowly a
 <img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/lettersArchive.png?raw=true" alt="Imagem" width="800" height=auto>
 </div>
 
+(set: $fragmentos to $fragmentos + 1)
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+
 <div class="caixa"> 
 You see Florbela turn to you:
 "Love was what made me eternal – not by being endless, but by being whole. It can make you eternal too, as long as you let some of it return to the one place it began: you."
-(set: $fragmentos to $fragmentos + 1)
-(align:"=><=")[+1 fragment collected]
-(set: $destino to "Ending 2")
-(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
++1 fragment collected
 [[Explore the whispers’ archive ->Whisper's Archive]] 
 [[Explore the abandoned room’s archive ->Abandoned Room's Archive]]
 [[Leave->$destino]]
@@ -577,10 +585,7 @@ Florbela hugs you and a tear rolls down her face. Then the ceiling starts shinin
 <div class="caixa"> 
 The mirror reflects Florbela… but it also reflects yourself. You seem to merge together.
 "Maybe we are each other’s reflection."
-(set: $fragmentos to $fragmentos + 1)
-(align:"=><=")[+1 fragment collected]
-(set: $destino to "Ending 2")
-(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
++1 fragment collected
 [[Explore the letters’ archive ->Letter's Archive]] 
 [[Explore the whisper's archive ->Whisper's Archive]]
 [[Leave->$destino]]
@@ -657,13 +662,14 @@ It is to be a beggar and to give as one who is King of the Kingdom of Here and B
 <img src="https://github.com/joanamaia03/NarrativasInterativas/blob/main/images/abandonedsArchive.png?raw=true" alt="Imagem" width="800" height=auto>
 </div>
 
+(set: $fragmentos to $fragmentos + 1)
+(set: $destino to "Ending 2")
+(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
+
 <div class="caixa"> 
 You use pieces of memories to reconstruct the diary’s entries.
 "Even fragmented… I am still me."
-(set: $fragmentos to $fragmentos + 1)
-(align:"=><=")[+1 fragment collected]
-(set: $destino to "Ending 2")
-(if: $fragmentos > 0 and $fragmentos <= 2)[(set: $destino to "Ending 3")](else-if: $fragmentos > 2)[(set: $destino to "Ending 4")]
++1 fragment collected
 [[Explore the letters’ archive ->Letter's Archive]] 
 [[Explore the whisper's archive ->Whisper's Archive]]
 [[Leave->$destino]]
